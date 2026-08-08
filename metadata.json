@@ -1,0 +1,6 @@
+{
+  "name": "AI Smart Government Scheme Automation System Using DigiLocker",
+  "description": "An AI-powered platform that uses authorized DigiLocker digital documents to automatically discover government scheme eligibility, check required documents, pre-fill applications, and assist citizens in English and Tamil.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,70 @@
+{
+  "entities": {
+    "Application": {
+      "title": "Scheme Application",
+      "description": "Submitted government scheme applications with reference number and DigiLocker tracking status",
+      "type": "object",
+      "properties": {
+        "schemeId": { "type": "string" },
+        "schemeTitle": { "type": "string" },
+        "schemeTitleTamil": { "type": "string" },
+        "citizenName": { "type": "string" },
+        "submittedAt": { "type": "string" },
+        "referenceNo": { "type": "string" },
+        "status": { "type": "string" },
+        "amountOrBenefit": { "type": "string" },
+        "remarks": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["schemeId", "schemeTitle", "citizenName", "referenceNo", "status"]
+    },
+    "CitizenProfile": {
+      "title": "Citizen Profile",
+      "description": "Citizen demographic profile parameters for AI scheme matching",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "age": { "type": "number" },
+        "gender": { "type": "string" },
+        "annualIncome": { "type": "number" },
+        "occupation": { "type": "string" },
+        "education": { "type": "string" },
+        "district": { "type": "string" },
+        "state": { "type": "string" },
+        "category": { "type": "string" },
+        "isGovernmentSchoolStudent": { "type": "boolean" },
+        "landOwnershipAcres": { "type": "number" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["name", "age", "gender", "annualIncome", "district", "category"]
+    },
+    "DigiLockerDocument": {
+      "title": "DigiLocker Document",
+      "description": "DigiLocker verified document certificate record",
+      "type": "object",
+      "properties": {
+        "docType": { "type": "string" },
+        "docNumber": { "type": "string" },
+        "issuedBy": { "type": "string" },
+        "issueDate": { "type": "string" },
+        "status": { "type": "string" },
+        "digitalSealHash": { "type": "string" }
+      },
+      "required": ["docType", "docNumber", "issuedBy", "status"]
+    }
+  },
+  "firestore": {
+    "applications": {
+      "entity": "Application",
+      "description": "Collection of all submitted scheme applications"
+    },
+    "citizen_profiles": {
+      "entity": "CitizenProfile",
+      "description": "Collection of citizen profiles"
+    },
+    "documents": {
+      "entity": "DigiLockerDocument",
+      "description": "Collection of DigiLocker documents"
+    }
+  }
+}
